@@ -19,6 +19,12 @@ public class RendimentoBruto {
 		return rb;
 	}
 	
+	public static double gerarRendimentoLiquido(int n, double p, double i) {
+		double rb =gerarRendimentoBruto(n, p, i); 
+		double im = gerarImposto(n, p, i); 
+		return  ((rb-im)/p)*100;
+	}
+	
 	public static double gerarImposto(int n, double p, double i) {
 		return	gerarRendimentoBruto(n, p, i) * al(n);
 	}
