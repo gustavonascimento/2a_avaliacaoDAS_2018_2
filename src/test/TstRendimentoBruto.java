@@ -1,5 +1,6 @@
 package test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
@@ -8,21 +9,11 @@ import src.RendimentoBruto;
 
 class TstRendimentoBruto {
 	
-	private double i;
-	private double p;
-	private double n;
-	private static double rb;
-	
-	public TstRendimentoBruto(double i, double p, double n) {
-		this.i = i;
-		this.p = p;
-		this.n = n;
-	}
 	
 	@Test
 	void testRendimentoBruto() {
-		RendimentoBruto rb = RendimentoBruto.gerarRendimentoBruto(0.08, 500, 120/360);
-		assertEquals(13.2, RendimentoBruto.gerarRendimentoBruto(0.08, 500, 120/360));
+		RendimentoBruto rb = new RendimentoBruto();
+		assertEquals(13.15, rb.gerarRendimentoBruto(120, 500.00, 8.0), 0.01);
 	}
 
 }
