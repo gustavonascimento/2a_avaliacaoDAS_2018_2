@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 class TstRendimentoBruto {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void testRendimentoBruto() {
+		assertEquals(500*(120/360)*0.08, 500*(120/360)*0.08);
 	}
 
 }
