@@ -19,5 +19,29 @@ public class RendimentoBruto {
 		return rb;
 	}
 	
+	public static double gerarImposto(int n, double p, double i) {
+		return	gerarRendimentoBruto(n, p, i) * al(n);
+	}
+	
+	private static double al(int dias) {
+		if (dias <=180 ) {
+			
+			return 0.225;
+		
+		}else if(dias <= 360) {
+		
+			return 0.2;
+		
+		}else if(dias <= 720) {
+		
+			return 0.175;
+		
+		}else {
+		
+			return 0.15;
+		}
+	}
+
+	
 
 }
